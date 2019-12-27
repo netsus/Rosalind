@@ -41,7 +41,7 @@ def mortal_fib(n,m):
             for i in range(1,len(rabbit_li)-1):
                 tmp_li[0]+=rabbit_li[i]
                 tmp_li[i+1]=rabbit_li[i]
-            rabbit_li=tmp_li[:] # swallow copy
+            rabbit_li=tmp_li[:] # shallow copy
             for i in range(len(tmp_li)): # initialize tmp_li
                 tmp_li[i]-=tmp_li[i]
     return sum(rabbit_li)
