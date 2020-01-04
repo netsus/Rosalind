@@ -3,10 +3,14 @@
 
 # In[32]:
 """
+난이도 : 1.5
+
 문제: 주어진 RNA 서열을 CONDON Table에 따라 아미노산 서열로 번역하여 출력하시오.
+
 알고리즘 : RNA 코돈과 아미노산 symbol을 딕셔너리로 만들고,
 RNA 서열을 입력으로, 아미노산 서열을 출력으로 하는 translate함수를 만듦.
-단 종결코돈은 symbol을 Stop으로 지정하여 해당 코돈이 나오면 멈추도록 함."""
+단 종결코돈은 symbol을 Stop으로 지정하여 해당 코돈이 나오면 멈추도록 함.
+"""
 
 rna_amino_table = """UUU F      CUU L      AUU I      GUU V
 UUC F      CUC L      AUC I      GUC V
