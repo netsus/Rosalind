@@ -9,3 +9,25 @@
 
 알고리즘 : 
 """
+import networkx as nx
+from IPython.core.display import Image
+from networkx.drawing.nx_pydot import to_pydot
+
+def make_graph(g,f,v,e):
+    for i in range(1,e+1):
+        start,end = map(int,f.readline().split())
+        g.add_edge(start,end)
+    return g
+
+with open('rosalind_dag.txt') as f:
+    k = int(f.readline())
+    for i in range(k):
+        f.readline()
+        v,e = map(int,f.readline().split())
+        g = nx.DiGraph()
+        graph = make_graph(g,f,v,e)
+        try:
+            nx.find_cycle(graph,orientation='original')
+            print(-1,end=' ')
+        except:
+            print(1,end=' ')
